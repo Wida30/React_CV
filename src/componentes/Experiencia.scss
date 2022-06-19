@@ -1,0 +1,28 @@
+
+
+
+.experiencia{
+    width: 90vw;
+  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    background-color: whitesmoke;
+
+   
+
+   
+
+    h2{
+        font-weight: bold;
+        background-color: whitesmoke;
+    }
+    p{
+        background-color: whitesmoke;
+        text-align: justify;
+        padding: 0% 5%;
+    }
+}

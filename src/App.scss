@@ -1,0 +1,36 @@
+*{
+
+    background-image: url(../public/assets/soft-circle-scales.png);
+    background-color: rgb(102,102,102)
+    ;
+
+    .botones{
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        margin: 20px;
+ 
+
+        .boton{
+            width: 180px;
+            height: 30px;
+            text-transform: uppercase;
+            background-color: rgb(210,201,168);
+            font-weight: bold;
+            box-shadow: 5px 5px 15px 0px #000000;
+            cursor: pointer;
+
+
+
+        }
+
+        
+
+    
+
+    }
+
+}

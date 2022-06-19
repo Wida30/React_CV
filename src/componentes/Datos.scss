@@ -1,0 +1,51 @@
+.main {
+  display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3%;
+   border-bottom: 10px double rgb(210,201,168);
+
+   .enlaces{
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+
+     &__boton{
+
+      border: none;
+
+      cursor: pointer;
+     }
+   }
+
+  .datos {
+    width: 40vw;
+   
+  }
+
+  .miFoto {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  p{
+    font-weight: bold;
+    color: black;
+    text-transform: capitalize;
+  }
+
+  .redes{
+
+    width: 50px;
+    height: 50px;
+    margin: 5%;
+  
+  }
+}

@@ -1,0 +1,17 @@
+.mas{
+    margin-top: 22px;
+    border-top: 10px double rgb(210, 201, 168);
+    display: flex;
+    flex-direction: row;
+   
+    justify-content: center;
+
+    .idiomas, .habilidades{
+
+        width: 40vw;
+        text-transform: capitalize;
+    }
+
+
+
+}
