@@ -10,7 +10,7 @@
   .datos {
     width: 100%;
     text-align: center;
-
+    color: rgb(54,184,179);
     text-transform: uppercase;
   }
 
@@ -32,7 +32,6 @@
       display: flex;
       gap: 59%;
       flex-direction: column;
-
     }
 
     &__boton {
@@ -41,6 +40,12 @@
       width: 70px;
       height: 70px;
       background-color: inherit;
+    }
+
+    .mostrar {
+      width: 100%;
+
+      text-align: center;
     }
   }
 
@@ -54,7 +59,6 @@
   a {
     text-decoration: none;
     color: black;
-    
   }
 
   .redes {

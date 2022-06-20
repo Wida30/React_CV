@@ -51,8 +51,6 @@ const Datos = ({ datos }) => {
             >
               <img src={datos.logoEmail} alt="Email" className="redes"></img>
             </button>
-
-            {showEmail === true ? <a href={datos.email} target="-blank"> {datos.email} </a> : <p> </p>}
           </div>
 
           <div className="otro">
@@ -62,20 +60,44 @@ const Datos = ({ datos }) => {
             >
               <img src={datos.logoLink} alt="linkedin" className="redes"></img>
             </button>
-
-            {showLinkedin === true ? <a href={datos.linkedin} target="-blank"> {datos.linkedin} </a> : <p> </p>}
           </div>
 
           <div className="otro">
             <button className="enlaces__boton" onClick={() => mostrarGit(true)}>
               <img src={datos.logoGit} alt="github" className="redes"></img>
             </button>
-
-            {showGit === true ? <a href={datos.gitHub} target="-blank">{datos.gitHub}</a>  : <p> </p>}
           </div>
-
         </div>
+        <div className="mostrar">
+          {showEmail === true ? (
+            <a href={datos.email} target="-blank">
+              {" "}
+              {datos.email}{" "}
+            </a>
+          ) : (
+            <p> </p>
+          )}
+
+          {showLinkedin === true ? (
+            <a href={datos.linkedin} target="-blank">
+              {" "}
+              {datos.linkedin}{" "}
+            </a>
+          ) : (
+            <p> </p>
+          )}
+
+          {showGit === true ? (
+            <a href={datos.gitHub} target="-blank">
+              {datos.gitHub}
+            </a>
+          ) : (
+            <p> </p>
+          )}
+        </div>
+        
       </div>
+     
     </div>
   );
 };
