@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CV } from "../CV/Cv";
+
 import "./Datos.scss";
 
 const Datos = ({ datos }) => {
@@ -35,44 +35,47 @@ const Datos = ({ datos }) => {
 
   return (
     <div className="main">
-      <h2 className="datos">
-        {datos.name} {datos.surmane}
-      </h2>
+      <img src={datos.image} alt="Laura" className="miFoto" />
+
       <div className="enlaces">
-        <button className="enlaces__boton" onClick={() => mostrarEmail(true)}>
-          <img src={datos.logoEmail} alt="Email" className="redes"></img>
-        </button>
-        <div className="enlaces__datos">
-          {showEmail === true ? <p> laura.martinDL@gmail.com </p> : <p> </p>}
-        </div>
+        <h2 className="datos">
+          {datos.name}
+          {datos.surmane}
+        </h2>
 
-        <button
-          className="enlaces__boton"
-          onClick={() => mostrarLinkedin(true)}
-        >
-          <img src={datos.logoLink} alt="linkedin" className="redes"></img>
-        </button>
+        <div className="fila">
+          <div className="otro">
+            <button
+              className="enlaces__boton"
+              onClick={() => mostrarEmail(true)}
+            >
+              <img src={datos.logoEmail} alt="Email" className="redes"></img>
+            </button>
 
-        <div className="enlaces__datos">
-          {showLinkedin === true ? (
-            <p>
-              {" "}
-              https://www.linkedin.com/in/laura-martin-de-loeches-a13667234/{" "}
-            </p>
-          ) : (
-            <p> </p>
-          )}
-        </div>
+            {showEmail === true ? <a href={datos.email} target="-blank"> {datos.email} </a> : <p> </p>}
+          </div>
 
-        <button className="enlaces__boton" onClick={() => mostrarGit(true)}>
-          <img src={datos.logoGit} alt="Email" className="redes"></img>
-        </button>
-        <div className="enlaces__datos">
-          {showGit === true ? <p> https://github.com/Wida30 </p> : <p></p>}
+          <div className="otro">
+            <button
+              className="enlaces__boton"
+              onClick={() => mostrarLinkedin(true)}
+            >
+              <img src={datos.logoLink} alt="linkedin" className="redes"></img>
+            </button>
+
+            {showLinkedin === true ? <a href={datos.linkedin} target="-blank"> {datos.linkedin} </a> : <p> </p>}
+          </div>
+
+          <div className="otro">
+            <button className="enlaces__boton" onClick={() => mostrarGit(true)}>
+              <img src={datos.logoGit} alt="github" className="redes"></img>
+            </button>
+
+            {showGit === true ? <a href={datos.gitHub} target="-blank">{datos.gitHub}</a>  : <p> </p>}
+          </div>
+
         </div>
       </div>
-
-      <img src={datos.image} alt="Laura" className="miFoto" />
     </div>
   );
 };

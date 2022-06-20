@@ -10,36 +10,33 @@ import Mas from "./componentes/Mas";
 const { datos, estudios, experiencia, idiomas, habilidades } = CV;
 
 function App() {
+  const [estado, setEstado] = useState("Estudios");
 
-  
-  const [showEstudios, setEstudios] = useState(true);
+  const condicion = () => {
+    if (estado === "Estudios") {
+      return <Estudios estudios={estudios} />;
+    } else if (estado === "Aboutme") {
+      return <Aboutme datos={datos} />;
+    } else if (estado === "Experiencia") {
+      return <Experiencia experiencia={experiencia} />;
+    } else {
+      return <Mas idiomas={idiomas} habilidades={habilidades}></Mas>;
+    }
+  };
 
   return (
     <>
       <div className="App">
-        <Datos datos={datos}/>
-        <Aboutme datos={datos}/>
-
-        <div className="botones">
-
-        <button className="boton" onClick={() => setEstudios(true)}>
-          Estudios
-        </button>
-        <button className="boton" onClick={() => setEstudios(false)}>
-          Experiencia
-        </button>
-
-        </div>
-
-        <div>
-          {showEstudios ? (<Estudios estudios={estudios}/>) : (<Experiencia experiencia={experiencia} />)}
-        </div>
-
-       
-        <Mas idiomas={idiomas} habilidades={habilidades}></Mas>
-
-
+        <Datos datos={datos} />
       </div>
+
+      <div className="botones">
+        <button onClick={() => setEstado("Aboutme")}>Sobre mi</button>
+        <button onClick={() => setEstado("Estudios")}>Estudios</button>
+        <button onClick={() => setEstado("Experiencia")}>Experiencia</button>
+        <button onClick={() => setEstado("Mas")}>Habilidades</button>
+      </div>
+      <div>{condicion()}</div>
     </>
   );
 }

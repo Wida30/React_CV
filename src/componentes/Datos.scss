@@ -1,51 +1,65 @@
 .main {
   display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 3%;
-   border-bottom: 10px double rgb(210,201,168);
-
-   .enlaces{
-    width: 60vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-
-
-     &__boton{
-
-      border: none;
-
-      cursor: pointer;
-     }
-   }
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1%;
+  border-bottom: 10px double rgb(54, 184, 179);
 
   .datos {
-    width: 40vw;
-   
+    width: 100%;
+    text-align: center;
+
+    text-transform: uppercase;
+  }
+
+  .fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .enlaces {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
+
+    .otro {
+      display: flex;
+      gap: 59%;
+      flex-direction: column;
+
+    }
+
+    &__boton {
+      border: none;
+      cursor: pointer;
+      width: 70px;
+      height: 70px;
+      background-color: inherit;
+    }
   }
 
   .miFoto {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 50%;
   }
 
-  p{
-    font-weight: bold;
+  a {
+    text-decoration: none;
     color: black;
-    text-transform: capitalize;
+    
   }
 
-  .redes{
-
+  .redes {
     width: 50px;
     height: 50px;
     margin: 5%;
-  
   }
 }
