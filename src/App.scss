@@ -6,8 +6,9 @@
     align-items: center;
     justify-content: center;
     gap: 5%;
-    margin: 20px;
+    margin: 10px;
     flex-wrap: wrap;
+    height: 80px;
 
     button{
         cursor: pointer;
@@ -20,7 +21,26 @@
 
     }
     
-
+    .custom-shape-divider-bottom-1661710624 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1661710624 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 309px;
+    }
+    
+    .custom-shape-divider-bottom-1661710624 .shape-fill {
+        fill: #36B8B3;
+    }
 
   
 }

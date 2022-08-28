@@ -1,22 +1,25 @@
 .educacion {
   width: 90vw;
-  
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin: auto;
-  background-color:  rgb(245, 245, 245, 0.4);
+  background-color: rgb(245, 245, 245, 0.4);
 
   &__text {
     display: flex;
     flex-direction: column;
-    
+
     justify-content: center;
     align-items: center;
-  
-    
-  
-   
+
+    h2{
+      font-size: 1.2rem;
+    }
+    p{
+      font-size: 1rem;
+    }
   }
 }

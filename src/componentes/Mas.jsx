@@ -7,8 +7,8 @@ const Mas = ({ idiomas, habilidades }) => {
       <div className="mas">
         <div className="idiomas">
           <p> Idioma: {idiomas.language}</p>
-          <p> escrito: {idiomas.wrlevel}</p>
-          <p> hablado: {idiomas.splevel}</p>
+          <p> Escrito: {idiomas.wrlevel}</p>
+          <p> Hablado: {idiomas.splevel}</p>
         </div>
 
         <div className="habilidades">

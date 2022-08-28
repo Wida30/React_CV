@@ -35,13 +35,14 @@ const Datos = ({ datos }) => {
 
   return (
     <div className="main">
+      
       <img src={datos.image} alt="Laura" className="miFoto" />
 
       <div className="enlaces">
         <h2 className="datos">
-          {datos.name}
-          {datos.surmane}
+          Laura Martin de Loeches
         </h2>
+        
 
         <div className="fila">
           <div className="otro">
@@ -95,10 +96,12 @@ const Datos = ({ datos }) => {
             <p> </p>
           )}
         </div>
-        
       </div>
-     
+
+      
     </div>
+
+    
   );
 };
 
